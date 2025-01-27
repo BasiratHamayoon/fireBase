@@ -24,6 +24,11 @@ function App() {
   const handleSingIn = async (e) => {
     e.preventDefault();
     const data = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+    if(data.user){
+      alert("User Added Successfully!")
+    } else {
+      alert("User Added Failed!");
+    }
     console.log(FormData)
   }
 
